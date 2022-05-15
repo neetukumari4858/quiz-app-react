@@ -1,0 +1,35 @@
+/* footer */
+.footer-div{
+    height: 6.5rem;
+    width:100%;
+    position: relative;
+    top: 5rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 5px 1px var(--gainsboro-color);
+}
+.social-media{
+    display: flex;
+    gap: 2rem;
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+    color: var(--white-color);
+} 
+.quiz-headind-three{
+    color: var(--white-color);
+}
+/* h4{
+    margin-top: -1rem;
+    margin-left: 1.8rem;
+    color: var(--white-color);
+} */
+.quizIcon{
+    color: var(--white-color);
+    font-size:1.8rem;
+}
+.quizGithubIcon{
+    color: var(--white-color);
+    font-size:1.8rem;
+    margin-left: -4rem;
+    margin-top: 1.5rem;
+}
