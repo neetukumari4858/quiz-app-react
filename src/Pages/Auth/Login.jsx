@@ -29,8 +29,8 @@ const Login = () => {
             </div>
 
             <button type='button' className="videologin-btn" >Login</button>
-            <h4 className='create-account'><Link to="#" className='createAccount'>Create New Account</Link> <i className='fas fa-angle-right'></i></h4> 
-            {/* <h4 className='create-account'><Link to="/SignUpPage" className='createAccount'>Create New Account</Link> <i className='fas fa-angle-right'></i></h4> */}
+
+            <h4 className='create-account'><Link to="/SignUpPage" className='createAccount'>Create New Account</Link></h4>
           </div>
         </form>
         </div>
