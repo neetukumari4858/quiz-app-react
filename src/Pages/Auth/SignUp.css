@@ -36,6 +36,11 @@
     border-radius: 0.3rem;
     background-color: var(--red-color);
     color: var(--white-color);
+
+}
+.sign-btn:disabled{
+    background-color: gray ;
+    color: black ;
 }
 .alreadyHaveAccount{
     color: var(--white-color);
@@ -45,4 +50,15 @@
     text-decoration: none;
     color: var(--blue-color);
     margin-left: 1rem;
+}
+.errorMsg{
+    font-weight: bold;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--red-color);
+    position: relative;
+    top: 0.4rem;
+    /* margin: 0.5rem; */
 }

@@ -36,3 +36,8 @@ body{
     overflow-y:scroll; 
     overflow-x: hidden;
 }
+.userName{
+    display: flex;
+    gap: 1;
+    color:  var(--text-color);
+}
