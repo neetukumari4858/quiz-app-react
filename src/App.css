@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+:root{
+  --gainsboro-color:gainsboro;
+  --gray-color:gray;
+  --light-gray-color:rgb(92, 88, 88);
+  --red-color:rgb(240, 57, 57);
+  --green-color:rgb(97, 240, 97);
+  --white-color:white;
+  --black-color:black;
+  --dark-red:red;
+  --blue-color:rgba(0,215,255,1);
+  --football-bg-color:linear-gradient(90deg, rgba(84,91,219,1) 0%, rgba(56,170,249,1) 48%, rgba(0,215,255,1) 100%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* html {
+  font-size: 62.5%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+} */
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body{
+  /* overflow-y: hidden; */
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--black-color);
 }
