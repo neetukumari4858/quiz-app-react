@@ -1,30 +1,24 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router";
-import { getAuth} from "firebase/auth";
+import { useContext, createContext, useState, useEffect } from "react";
+const AuthContext = createContext({ isLogedIn: false });
+const AuthProvider = ({ children }) => {
+  const userLoggedIn = localStorage.getItem("user") ? true : false;
+  const [isLogedIn, setLogedIn] = useState(userLoggedIn);
+  const [userDetail, setUserdetail] = useState({ token: "", user: {} });
+  const token = localStorage.getItem("token");
+  const user = JSON.parse(localStorage.getItem("user"));
 
-const AuthContext=createContext(null);
-const AuthProvider=({children})=>{
-    const [userData,setUserData]=useState({})
-    const navigate=useNavigate();
-    const auth=getAuth();
-
-    useEffect(()=>{
-      auth.onAuthStateChanged((user)=>{
-        if (user){
-            setUserData(user.displayName);
-            navigate("/")
-        }else setUserData("")
-      })
-    },[])
-    return (
-        <AuthContext.Provider value={{userData}}>{children}</AuthContext.Provider>
-    )
-}
-const useAuth=()=>{
-    const context=useContext(AuthContext);
-    if (context===undefined){
-        throw new Error ("Auth Must Be used inside Provider")        
+  useEffect(() => {
+    if (token && user) {
+      setUserdetail({ token, user });
     }
-    return context;
-}
-export {AuthProvider,useAuth}
+  }, [token, user]);
+  return (
+    <AuthContext.Provider
+      value={{ isLogedIn, setLogedIn, userDetail, setUserdetail }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
+const useAuth = () => useContext(AuthContext);
+export { useAuth, AuthProvider };

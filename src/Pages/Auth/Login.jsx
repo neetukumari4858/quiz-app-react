@@ -1,69 +1,146 @@
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useState } from 'react';
-import { Link ,useNavigate} from 'react-router-dom';
-import { auth } from '../../firebase';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { auth } from "../../firebase";
+import { useAuth } from "../../Hooks/Context/authContext";
+import { toast } from "react-toastify";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
-import "./Login.css"
+import "./Login.css";
 const Login = () => {
-  const [loginUserData,setloginUserData]=useState({
+  const [inputType, setinputType] = useState("password");
+  const [loginUserData, setloginUserData] = useState({
     email: "",
     password: "",
     checkPolicy: false,
-  })
-  const navigate=useNavigate();
-  const [errorMsg,setErrorMsg]=useState("")
-  const [submitButtonDisabled,setsubmitButtonDisabled]=useState(false)
-  const loginHandler=()=>{
-      if (!loginUserData.email || !loginUserData.password){
-          setErrorMsg("Fill all fields");
-          return ;
-      }
-      else{
-          setErrorMsg("")
-          setsubmitButtonDisabled(true)
-          signInWithEmailAndPassword(auth,loginUserData.email,loginUserData.password)
-          .then((res)=>{
-              setsubmitButtonDisabled(false)
-              navigate("/RulesPage");
-          })
-          .catch((error)=>
-        { setsubmitButtonDisabled(false)
-          console.log(error.message)});
-      }
-  }
+  });
+  const { setLogedIn, setUserdetail } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const [errorMsg, setErrorMsg] = useState("");
+  const loginHandler = () => {
+    if (!loginUserData.email || !loginUserData.password) {
+      setErrorMsg("Fill all the fields");
+      return;
+    }
+    if (!loginUserData.checkPolicy)
+      toast.warning("tick the check box and agree to the terms and conditions");
+    else {
+      setErrorMsg("");
+      signInWithEmailAndPassword(
+        auth,
+        loginUserData.email,
+        loginUserData.password
+      )
+        .then((response) => {
+          localStorage.setItem("user", JSON.stringify(response.user.uid));
+          const token = response.user.accessToken;
+          localStorage.setItem("token", token);
+          setUserdetail({
+            token: response.user.accessToken,
+            user: response.user.uid,
+          });
+          setLogedIn(true);
+          navigate(location?.state?.from?.pathname ?? "/", { replace: true });
+          toast.success("Login Successfull !");
+        })
+        .catch((error) => {
+          const errorMsgs = error.message;
+          toast.error(errorMsgs);
+        });
+    }
+  };
   return (
     <div className="outer-Login-container">
-        <div className="login-outer-container">
+      <div className="login-outer-container">
         <form className="login-content-container">
           <div className="login-content-container">
-            <h2 className='Login-heading-two'>Login</h2>
-            <label className='lebel-text'>Email address</label>
-            <input className="user-input"
+            <h2 className="Login-heading-two">Login</h2>
+            <label className="lebel-text">Email address</label>
+            <input
+              className="user-input"
               type="email"
-              placeholder="  demo@gmail.com " onChange={(event)=>setloginUserData((prev)=>({...prev, email:event.target.value}))}
-              />
-
-            <label className='lebel-text'>Password</label>
-            <input className="user-input" placeholder="  Enter Password..."
-              type="password" onChange={(event)=>setloginUserData((prev)=>({...prev,password:event.target.value}))}
-              
-             
+              placeholder="  demo@gmail.com "
+              onChange={(event) =>
+                setloginUserData((prev) => ({
+                  ...prev,
+                  email: event.target.value,
+                }))
+              }
+              required
             />
-            <div className='forgotPasswodText'>
-              <input type="checkbox" id="rememberMe" name="rememberMe" 
-               
-              />
-              <label htmlFor="rememberMe" className="remember-me">Remember me </label>
-              <p className='forgotPassword'>Forgot Password ?</p>
-            </div>
-            <b className='errorMsg'> {errorMsg}</b>
-            <button type='button' className="videologin-btn" disabled={submitButtonDisabled} onClick={loginHandler}>Login</button>
 
-            <h4 className='create-account'><Link to="/SignUpPage" className='createAccount'>Create New Account</Link></h4>
+            <label className="lebel-text">Password</label>
+            <input
+              type={inputType}
+              className="user-input password"
+              placeholder="  Enter Password..."
+              value={loginUserData.password}
+              onChange={(event) =>
+                setloginUserData((prev) => ({
+                  ...prev,
+                  password: event.target.value,
+                }))
+              }
+              required
+            />
+            <div
+              className="passwordIcon"
+              onClick={() =>
+                inputType === "text"
+                  ? setinputType("password")
+                  : setinputType("text")
+              }
+            >
+              {inputType === "text" ? (
+                <p>
+                  <AiFillEye />
+                </p>
+              ) : (
+                <p>
+                  <AiFillEyeInvisible />
+                </p>
+              )}
+            </div>
+            <div className="footerDiv">
+              <div className="forgotPasswodText">
+                <input
+                  type="checkbox"
+                  id="rememberMe"
+                  name="rememberMe"
+                  checked={loginUserData.checkPolicy}
+                  onChange={() =>
+                    setloginUserData({
+                      ...loginUserData,
+                      checkPolicy: !loginUserData.checkPolicy,
+                    })
+                  }
+                />
+                <label htmlFor="rememberMe" className="remember-me">
+                  Remember me{" "}
+                </label>
+                <p className="forgotPassword">Forgot Password ?</p>
+              </div>
+              <b className="errorMsg"> {errorMsg}</b>
+              <button
+                type="button"
+                className="videologin-btn"
+                onClick={loginHandler}
+              >
+                Login
+              </button>
+
+              <h4 className="create-account">
+                <Link to="/SignUpPage" className="createAccount">
+                  Create New Account
+                </Link>
+              </h4>
+            </div>
           </div>
         </form>
-        </div>
+      </div>
     </div>
-  )
-}
-export {Login}
+  );
+};
+export { Login };

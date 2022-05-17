@@ -37,10 +37,6 @@
     color:var(--white-color);
     
 }
-/* .fa-angle-right{
-    color:var(--white-color);
-    margin:-1.2rem 2rem;
-} */
 .videologin-btn{
     padding: 0.7rem 9rem;
     background-color: var(--red-color);
@@ -49,6 +45,7 @@
     color: var(--white-color);
     font-weight: 900;
     margin:0.5rem 0 0 0.5rem ;
+    cursor: pointer;
 }
 .forgotPasswodText{
     display: flex;
@@ -61,7 +58,6 @@
     justify-content: flex-start;
     margin: 0.7rem ;
     font-size: 1.2rem;
-    /* border: 1px solid red; */
 }
 
 .remember-me{
@@ -76,7 +72,6 @@
     position: relative;
     top:-1rem;
     left: -0.5rem;
-    /* border: 1px solid red; */
 }
 .createAccount{
     text-decoration: none;
@@ -84,4 +79,21 @@
     position: relative;
     top:-0.1rem;
     color:var(--white-color);
+}
+
+.passwordIcon {
+    color: black;
+    position: relative;
+    top: -3.2rem;
+    left: 18.3rem;
+}
+.fa-eye-slash{
+    background-color: red;
+    position: relative;
+    top: -3rem;
+    left: 2rem;
+}
+.footerDiv{
+    position: relative;
+    top: -3rem;
 }

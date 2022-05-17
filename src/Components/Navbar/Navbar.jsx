@@ -1,37 +1,48 @@
-// import { getAuth } from 'firebase/auth'
-import React from 'react'
-import { Link } from 'react-router-dom'
-// import { useAuth } from '../../Hooks/Context/authContext'
-import "./Navbar.css"
-const Navbar=()=> {
-    // const auth=getAuth();
-    // const {userData}=useAuth();
-    // const signOut=()=>{
-    //     signOut(auth)
-    //     .then(() => {
-    //         alert("signed out");
-    //     })
-    //     .catch((error) => {
-    //         console.log(error.message);
-    //     });
+import React from "react";
+import { auth, signOut } from "./../../firebase";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../Hooks/Context/authContext";
 
-    // }
-    return (
-        <nav className="navigation">
-            <label className="quiz-label">Quiz App</label>
-            <ul className='quizNav-ul'>
-                <Link className="anchor-link" to="/" >Home</Link>
-                {/* {userData? (
-                    <p className="userName cursorPointer" onClick={signOut}>
-                    <i className="fa-solid fa-right-to-bracket"></i>
-                    Hi, {userData.name}
-                    </p>
-                    ) : ( */}
-                        <Link className="anchor-link" to="/LoginPage" >Login</Link>
-                    {/* )} */}
-            </ul>
-        </nav>
-    )
-}
+import "./Navbar.css";
+const Navbar = () => {
+  const navigate = useNavigate();
+  const {
+    userDetail: { token, user },
+    setUserdetail,
+    setLogedIn,
+  } = useAuth();
+  const logoutHandler = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userEmail");
+    signOut(auth);
+    setUserdetail({ token: "", user: {} });
+    setLogedIn(false);
+    navigate("/");
+  };
+  return (
+    <nav className="navigation">
+      <label className="quiz-label">Quiz App</label>
+      <ul className="quizNav-ul">
+        <Link className="anchor-link" to="/">
+          Home
+        </Link>
 
-export { Navbar }
+        {token && user ? (
+          <button className="logout" onClick={logoutHandler}>
+            Logout
+          </button>
+        ) : (
+          <button className="login-btn navLoginbtn">
+            <Link className="navlink" to="LoginPage">
+              Login
+            </Link>
+          </button>
+        )}
+      </ul>
+    </nav>
+  );
+};
+export { Navbar };
+

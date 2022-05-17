@@ -1,7 +1,7 @@
 :root{
   --gainsboro-color:gainsboro;
   --gray-color:gray;
-  --text-color:#F7F5F5;
+  --text-color:white;
   --light-gray-color:rgb(92, 88, 88);
   --red-color:rgb(240, 57, 57);
   --green-color:rgb(97, 240, 97);
@@ -11,20 +11,7 @@
   --blue-color:rgba(0,215,255,1);
   --football-bg-color:linear-gradient(90deg, rgba(84,91,219,1) 0%, rgba(56,170,249,1) 48%, rgba(0,215,255,1) 100%);
 }
-/* html {
-  font-size: 62.5%;
-  min-height: 100vh;
-} */
-
-
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
 body{
-  /* overflow-y: hidden; */
   margin: 0;
   overflow-x: hidden;
   background-color: var(--black-color);
