@@ -30,7 +30,7 @@ const SignUp = () => {
                 await updateProfile(user,{
                     displayName:newUser.firstName
                 });
-                navigate("/");
+                navigate("/RulesPage");
             })
             .catch((error)=>
            { setsubmitButtonDisabled(false)

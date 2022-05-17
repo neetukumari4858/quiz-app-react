@@ -24,7 +24,7 @@ const Login = () => {
           signInWithEmailAndPassword(auth,loginUserData.email,loginUserData.password)
           .then((res)=>{
               setsubmitButtonDisabled(false)
-              navigate("/");
+              navigate("/RulesPage");
           })
           .catch((error)=>
         { setsubmitButtonDisabled(false)
