@@ -1,5 +1,5 @@
-import { Routes,Route } from "react-router-dom"
 import { SignUp,Rules ,Login,Home} from "./../Pages/index"
+import { RequireAuth } from "../Utils/RequireAuth.js"
 
 const AppRouter=()=>{
     return (
@@ -7,7 +7,7 @@ const AppRouter=()=>{
             <Route path="/" element={<Home />}/>
             <Route path="/LoginPage" element={<Login />}/>
             <Route path="/SignUpPage" element={<SignUp/>}/>
-            <Route path="/RulesPage" element={<Rules/>}/>
+            <Route path="/RulesPage" element={<RequireAuth> <Rules/></RequireAuth> }/>
         </Routes>
     )
 }
