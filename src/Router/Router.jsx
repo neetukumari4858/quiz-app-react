@@ -1,5 +1,5 @@
-import { Routes,Route } from "react-router-dom"
 import { SignUp,Rules ,Login,Home} from "./../Pages/index"
+import { RequireAuth } from "../Utils/RequireAuth.js"
 const AppRouter=()=>{
     return (
         <Routes>
