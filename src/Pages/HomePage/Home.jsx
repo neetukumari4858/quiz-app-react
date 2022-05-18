@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Home.css"
 import { Footer } from '../../Components/Footer/Footer'
-// import { Link } from 'react-router-dom'
 import { badminton, cricket, football } from "./../../Image"
 import { Link } from 'react-router-dom'
 const Home = () => {
@@ -49,41 +48,3 @@ export { Home }
 
 
 
-
-    //     <div className="headings">
-    //     <h1>Quiz Masters</h1>
-    //     {/* <h2>Let's test your memory</h2> */}
-    //     <h2>Featured Sports Quiz</h2>
-    // </div>
-    // <div className="first-section">
-    //     {/* <!-- first box --> */}
-    //     <div className="cricket-box categories">
-    //         <Link to="#"> <img src={cricket} alt='error'/></Link>
-    //         <div>
-    //             <i className="gg-lock-unlock"></i>
-    //             <p className="paragraph">You don't Play For the Crowd,you Play For the country!</p>
-    //             <h1 className="button">Cricket</h1>
-    //         </div>
-    //         <i className="fa fa-unlock"></i>
-    //     </div>
-    //     {/* <!-- second box --> */}
-    //     <div className="football-box categories">
-    //         <Link to="#"> <img src={football} alt='error'/></Link>
-    //         <div>
-    //             <i className="gg-lock-unlock"></i>
-    //             <p className="paragraph">You don't Play For the Crowd,you Play For the country!</p>
-    //             <h1 className="button">Football</h1>
-    //         </div>
-    //         <i className="fa fa-lock"></i>
-    //     </div>
-    //     {/* <!-- third box--> */}
-    //     <div className="basketball-box categories">
-    //         <Link to="#"> <img src={badminton} alt='error'/></Link>
-    //         <div>
-    //             <i className="gg-lock-unlock"></i>
-    //             <p className="paragraph">You don't Play For the Crowd,you Play For the country!</p>
-    //             <h1 className="button">Basketball</h1>
-    //         </div>
-    //         <i className="fa fa-lock"></i>
-    //     </div>
-    // </div>
