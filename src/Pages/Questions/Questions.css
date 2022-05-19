@@ -50,6 +50,20 @@
     cursor: pointer;
     font-weight: 900;
 }
+.viewScorebtn{
+    padding: 0.8rem 1.4rem;
+    background-color: var(--white-color);
+    position: relative;
+    top:5rem;
+    left: 13rem;
+    text-align: start;
+    color: var(--black-color);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 900;
+}
 span{
     margin-left: 25rem;
 }

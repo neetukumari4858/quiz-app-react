@@ -3,34 +3,34 @@ import "./Questions.css";
 import { useState } from "react";
 import { quizQuestion } from "./data";
 import { useQuiz } from "./../../Hooks/Context/quizContext";
-import {BsArrowRightCircleFill} from "react-icons/bs"
+import { BsArrowRightCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Questions() {
   const [ques, setQues] = useState(0);
   const quizId = sessionStorage.getItem("categoryId");
   const [optionToggle, setoptionToggle] = useState("");
   const {
+    quizState: { selectedOptions },
     quizDispatch,
   } = useQuiz();
   const categoryQues = quizQuestion.find(
     (eachCategory) => eachCategory.categoryId === quizId
   );
 
-  const categorymatch = quizQuestion.some(
-    (eachCategory) => eachCategory.categoryId === quizId
-  );
   const quesInCategory = categoryQues.questions;
 
   const nextQuesHandler = () => {
     setQues(ques + 1);
-    if (categorymatch) {
-      quizDispatch({ type: "NEXT_QUES", payload: quesInCategory[ques] });
-    } else {
-      quizDispatch({ type: "NEXT_QUES", payload: [] });
-    }
   };
-  const optionHandler = (optionValue) => {
+  const optionHandler = (optionValue, eachOption) => {
     setoptionToggle(optionValue);
+    selectedOptions[ques] = optionValue;
+    quizDispatch({ type: "SELECTED_OPTION", payload: [...selectedOptions] });
+    if (eachOption.isRight) {
+      quizDispatch({ type: "CURRECT_ANS", payload: eachOption.value });
+    }
+    console.log(selectedOptions);
   };
   return (
     <div className="question-section">
@@ -55,14 +55,30 @@ function Questions() {
                   : "each_option"
               }`}
               key={eachOption.value}
-              onClick={() => optionHandler(eachOption.value)}
+              onClick={() => optionHandler(eachOption.value, eachOption)}
             >
               {eachOption.value}
             </div>
           ))}
-          <button className="btn" onClick={nextQuesHandler}>
-            Next &nbsp; <i className="angleRight"><BsArrowRightCircleFill/></i>
-          </button>
+          <div>
+            {ques === 4 ? (
+              <Link to="/ResultPage">
+                <button className="viewScorebtn">
+                  View Result&nbsp;&nbsp;
+                  <i className="angleRight">
+                    <BsArrowRightCircleFill />
+                  </i>
+                </button>
+              </Link>
+            ) : (
+              <button className="btn" onClick={nextQuesHandler}>
+                Next &nbsp;
+                <i className="angleRight">
+                  <BsArrowRightCircleFill />
+                </i>
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
