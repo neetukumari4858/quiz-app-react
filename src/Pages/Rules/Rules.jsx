@@ -1,5 +1,11 @@
 import "./Rules.css"
+import { useNavigate } from "react-router-dom"
 const Rules=()=>{
+    const navigate=useNavigate();
+    const startQuizHandler=()=>{
+        const quizId = sessionStorage.getItem('categoryId')
+        navigate(`/quiz/${quizId}`)
+    }
     return (
         <div className="rules-outer-container">
             <div className="rules-conainer">
@@ -14,9 +20,8 @@ const Rules=()=>{
                     </>
                 </div>
             </div>
-            <a href="/Quiz1-Que/Que1-Que1.html"><button className="play-now-btn">Start Quiz</button></a>
+            <div><button className="play-now-btn" onClick={startQuizHandler}>Start Quiz</button></div>
          </div>
     )
-
 }
 export {Rules}

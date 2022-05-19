@@ -22,30 +22,3 @@
     gap: 5rem;
     justify-content: center;
 }
-.categories:hover{
-    transform: scale(1.1);
-}
-.paragraph{
-    height: 2rem;
-    width: 14rem;
-    position: relative;
-    top: 0.9rem;
-    left: 2rem;
-    font-size: 1rem;
-    color: var(--white-color);
-}
-.button{
-    margin-top:1.4rem;
-    color: var(--white-color);
-}
-.images{
-    height: 12rem;
-    width: 17rem;
-    border-radius: 1rem;
-}
-.text-div{
-    height: 6rem;
-    box-shadow: 1px 0.5px 5px 0.7px gainsboro;
-    border-radius: 1rem;
-    margin-top: -0.9rem;
-}
