@@ -1,7 +1,7 @@
+
 import { Routes,Route } from "react-router-dom"
 import { RequireAuth } from "../Utils/RequireAuth.js"
 import {SignUp,Rules,Login,Home,Questions} from "./../Pages/index"
-
 const AppRouter=()=>{
     return (
         <Routes>
