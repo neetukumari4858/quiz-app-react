@@ -20,12 +20,10 @@ function Questions() {
     (eachCategory) => eachCategory.categoryId === quizId
   );
   const quesInCategory = categoryQues.questions;
-  console.log(quesInCategory);
 
   const nextQuesHandler = () => {
     setQues(ques + 1);
     if (categorymatch) {
-      console.log(quesInCategory[ques], "payload");
       quizDispatch({ type: "NEXT_QUES", payload: quesInCategory[ques] });
     } else {
       quizDispatch({ type: "NEXT_QUES", payload: [] });
