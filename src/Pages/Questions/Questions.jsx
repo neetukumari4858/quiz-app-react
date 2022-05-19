@@ -41,7 +41,7 @@ function Questions() {
               <h3>
                 {`Question: ${ques + 1}/5`} <span>Score:0</span>
               </h3>
-              <h2>{quesInCategory[ques].question}</h2>
+              <h2>{`Q${ques + 1}: ${quesInCategory[ques].question}`}</h2>
             </div>
             <br />
           </div>
