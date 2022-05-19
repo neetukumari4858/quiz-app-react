@@ -10,7 +10,7 @@ import {
       questions: [
         {
           question:
-         " 1. What is the length of a professional cricket pitch?",
+         " What is the length of a professional cricket pitch?",
           points: 10,
           options: [
             {
