@@ -16,8 +16,9 @@
 }
 .quiz-label{
     font-size: 2rem;
-    margin-left: 0.5rem;
-    margin-top: -1rem;
+    margin-left: 1rem;
+    position: relative;
+    top: 0.6rem;
     color: var(--white-color);
 }
 .quizNav-ul{

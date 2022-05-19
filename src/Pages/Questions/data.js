@@ -6,6 +6,7 @@ import {
       categoryId: '1',
       categoryName: 'cricket',
       categoryImg: cricket,
+      categoryDescription:"You don't Play For the Crowd,you Play For the country!",
       questions: [
         {
           question:
@@ -129,7 +130,7 @@ import {
       categoryId: '2',
       categoryName: 'football',
       categoryImg: football,
-    //   a) West Germany b) Brazil c) Argentina
+      categoryDescription:"You don't Play For the Crowd,you Play For the country!",
       questions: [
         {
           question:
@@ -251,6 +252,7 @@ import {
       categoryId: '3',
       categoryName: 'badminton',
       categoryImg:badminton,
+      categoryDescription:"You don't Play For the Crowd,you Play For the country!",
     }
   ]
   

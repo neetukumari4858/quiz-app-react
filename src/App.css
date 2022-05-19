@@ -10,9 +10,11 @@
   --dark-red:red;
   --blue-color:rgba(0,215,255,1);
   --football-bg-color:linear-gradient(90deg, rgba(84,91,219,1) 0%, rgba(56,170,249,1) 48%, rgba(0,215,255,1) 100%);
+  --transform-scale: scale(1.03);
 }
 body{
   margin: 0;
   overflow-x: hidden;
   background-color: var(--black-color);
+  color: white;
 }
