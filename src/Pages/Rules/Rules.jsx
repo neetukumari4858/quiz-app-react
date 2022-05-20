@@ -20,7 +20,7 @@ const Rules=()=>{
                     </>
                 </div>
             </div>
-            <div><button className="play-now-btn" onClick={startQuizHandler}>Start Quiz</button></div>
+            <div><button className="play-now-btn bg-white" onClick={startQuizHandler}>Start Quiz</button></div>
          </div>
     )
 }

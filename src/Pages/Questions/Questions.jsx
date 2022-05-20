@@ -62,7 +62,7 @@ function Questions() {
           <div>
             {ques === 4 ? (
               <Link to="/ResultPage">
-                <button className="viewScorebtn">
+                <button className="viewScorebtn bg-white">
                   View Result&nbsp;&nbsp;
                   <i className="angleRight">
                     <BsArrowRightCircleFill />
@@ -70,7 +70,7 @@ function Questions() {
                 </button>
               </Link>
             ) : (
-              <button className="btn" onClick={nextQuesHandler}>
+              <button className="btn bg-white" onClick={nextQuesHandler}>
                 Next &nbsp;
                 <i className="angleRight">
                   <BsArrowRightCircleFill />

@@ -62,6 +62,7 @@ const Login = () => {
               className="user-input"
               type="email"
               placeholder="  demo@gmail.com "
+              value={loginUserData.email}
               onChange={(event) =>
                 setloginUserData((prev) => ({
                   ...prev,
@@ -118,18 +119,34 @@ const Login = () => {
                   }
                 />
                 <label htmlFor="rememberMe" className="remember-me">
-                  Remember me{" "}
+                  Remember me
                 </label>
                 <p className="forgotPassword">Forgot Password ?</p>
               </div>
               <b className="errorMsg"> {errorMsg}</b>
-              <button
-                type="button"
-                className="videologin-btn"
-                onClick={loginHandler}
-              >
-                Login
-              </button>
+              <div className="login-grid">
+                <button
+                  type="button"
+                  className="videologin-btn bg-red"
+                  onClick={loginHandler}
+                >
+                  Login
+                </button>
+                <button
+                  type="button"
+                  className="videologin-btn  bg-white"
+                  onClick={() => {
+                    setloginUserData({
+                      ...loginUserData,
+                      email: "demo@gmail.com",
+                      password: "demo123",
+                      checkPolicy: true,
+                    });
+                  }}
+                >
+                  Guest Login
+                </button>
+              </div>
 
               <h4 className="create-account">
                 <Link to="/SignUpPage" className="createAccount">

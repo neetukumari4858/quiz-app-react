@@ -6,8 +6,9 @@
     display: flex;
     justify-content: center;
 }
+
 .login-outer-container{
-    height: 23rem;
+    height: 25rem;
     width: 23rem;
     margin-top: 5rem;
     display: flex;
@@ -20,12 +21,14 @@
     height: 23rem;
     width: 21rem;
     color:var(--white-color); 
+    margin-top: -0.5rem;
 }
 .user-input{
     height: 2rem;
     width: 20rem;
     margin-left: 0.3rem;
     border: 1px solid var(--gray-color);
+    color: var(--black-color);
 }
 .create-account{
     text-align: center;
@@ -38,14 +41,26 @@
     
 }
 .videologin-btn{
-    padding: 0.7rem 9rem;
-    background-color: var(--red-color);
+    /* background-color: var(--red-color); */
     border: transparent;
     border-radius: 0.2rem;
     color: var(--white-color);
     font-weight: 900;
-    margin:0.5rem 0 0 0.5rem ;
+    
     cursor: pointer;
+}
+.bg-red{
+    background-color: var(--red-color);
+}
+.bg-red:hover{
+    background-color: var(--light-red-color)
+}
+.bg-white{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.bg-white:hover{
+    background-color: var(--light-white-color);
 }
 .forgotPasswodText{
     display: flex;
@@ -82,13 +97,13 @@
 }
 
 .passwordIcon {
-    color: black;
+    color: var(--black-color);
     position: relative;
     top: -3.2rem;
     left: 18.3rem;
 }
 .fa-eye-slash{
-    background-color: red;
+    background-color: var(--dark-red);
     position: relative;
     top: -3rem;
     left: 2rem;
@@ -96,4 +111,10 @@
 .footerDiv{
     position: relative;
     top: -3rem;
+}
+.login-grid{
+    display: grid;
+    grid-template-columns: 21rem;
+    grid-template-rows: 2rem 2rem;
+    grid-row-gap: 1rem;
 }

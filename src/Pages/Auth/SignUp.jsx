@@ -139,7 +139,7 @@ const SignUp = () => {
           <b className="errorMsg"> {errorMsg}</b>
           <div>
             <button
-              className="sign-btn"
+              className="sign-btn bg-red"
               onClick={submisionHandler}
               disabled={submitButtonDisabled}
             >

@@ -30,11 +30,11 @@ const Navbar = () => {
         </Link>
 
         {token && user ? (
-          <button className="logout" onClick={logoutHandler}>
+          <button className="logout bg-red" onClick={logoutHandler}>
             Logout
           </button>
         ) : (
-          <button className="login-btn navLoginbtn">
+          <button className="login-btn navLoginbtn bg-red">
             <Link className="navlink" to="LoginPage">
               Login
             </Link>

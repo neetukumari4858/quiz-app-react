@@ -4,11 +4,13 @@
   --text-color:white;
   --light-gray-color:rgb(92, 88, 88);
   --red-color:rgb(240, 57, 57);
+  --light-red-color:rgb(247, 85, 85);
   --green-color:rgb(97, 240, 97);
   --white-color:white;
   --black-color:black;
   --dark-red:red;
-  --blue-color:rgba(0,215,255,1);
+  --light-white-color:rgb(241, 215, 215);
+  --blue-color:rgba(0,215,255,1); 
   --football-bg-color:linear-gradient(90deg, rgba(84,91,219,1) 0%, rgba(56,170,249,1) 48%, rgba(0,215,255,1) 100%);
   --transform-scale: scale(1.03);
 }
@@ -16,5 +18,5 @@ body{
   margin: 0;
   overflow-x: hidden;
   background-color: var(--black-color);
-  color: white;
+  color: var(--white-color);
 }
