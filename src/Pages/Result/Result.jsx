@@ -49,11 +49,11 @@ const Result = () => {
                         <div
                           key={eachOption.value}
                           className={` resultOptions ${
-                            eachOption.isRight && "correct_option"
+                            eachOption.isRight && "resultOptions correct_option"
                           } ${
                             checkAnswer(eachOption.value, index, eachOption) &&
                             !eachOption.isRight
-                              ? "wrong_option"
+                              ? "resultOptions wrong_option"
                               : ""
                           } `}
                         >

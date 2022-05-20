@@ -1,10 +1,10 @@
 import React from "react";
 import "./Questions.css";
 import { useState } from "react";
-import { quizQuestion } from "./data";
 import { useQuiz } from "./../../Hooks/Context/quizContext";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { quizQuestion } from "./data";
 
 function Questions() {
   const [ques, setQues] = useState(0);
@@ -30,7 +30,6 @@ function Questions() {
     if (eachOption.isRight) {
       quizDispatch({ type: "CURRECT_ANS", payload: eachOption.value });
     }
-    console.log(selectedOptions);
   };
   return (
     <div className="question-section">
