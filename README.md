@@ -38,7 +38,7 @@ $ npm start
  Component Libray
  Font Awesome
 ```
-[Project Link]([https://www.example.com](https://jade-buttercream-47af8f.netlify.app))
+[Project Link](https://jade-buttercream-47af8f.netlify.app)
 
 ## 🔗 Screenshorts
 
