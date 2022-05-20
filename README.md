@@ -15,6 +15,10 @@ In this App there is Quiz on sports basis We can select each category to Play an
 5. Quiz Result
    - Once I complete my quiz, I can see the result page containing my scores and answers.
 6. Authentication
+    ```
+    email: demo@gmail.com
+    password: demo123
+     ```
     - Signup
     - Login
     - Logout
