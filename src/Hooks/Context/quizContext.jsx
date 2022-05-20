@@ -6,7 +6,8 @@ const useQuiz=()=>useContext(quizContext)
 const QuizProvider=({children})=>{
     const [quizState,quizDispatch]=useReducer(quizReducer,{
         score:0,
-      selectedQuestion: [],  
+        rightAnsArr:[],
+        selectedOptions: [],  
     })
     return (
         <quizContext.Provider value={{quizState,quizDispatch}}>{children}</quizContext.Provider>

@@ -1,9 +1,14 @@
 export const quizReducer = (quizState, quizAction) => {
     switch (quizAction.type) {
-      case 'NEXT_QUES':
+      case 'SELECTED_OPTION':
         return {
           ...quizState,
-          selectedQuestion: [...quizState.selectedQuestion, quizAction.payload],
+          selectedOptions: quizAction.payload,
+        }
+      case 'CURRECT_ANS':
+        return {
+          ...quizState,
+          rightAnsArr: [...quizState.rightAnsArr, quizAction.payload],
         }
       default:
         return quizState
