@@ -121,7 +121,6 @@ const Login = () => {
                 <label htmlFor="rememberMe" className="remember-me">
                   Remember me
                 </label>
-                <p className="forgotPassword">Forgot Password ?</p>
               </div>
               <b className="errorMsg"> {errorMsg}</b>
               <div className="login-grid">
