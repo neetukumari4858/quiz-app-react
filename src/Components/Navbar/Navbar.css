@@ -1,6 +1,6 @@
 
 .navigation{
-    height: 3.5rem;
+    height: 4.5rem;
     width: 100%;
     border-bottom-left-radius: 1rem;
     box-shadow: 1px 1px 5px 1px var(--gainsboro-color);
@@ -24,7 +24,7 @@
 .quizNav-ul{
     display: flex;
     justify-content:flex-end;
-    margin-top: -1.5rem;
+    margin-top: -0.8rem;
     gap: 2rem;
     margin-right: 3rem;
     font-size:1.5rem;

@@ -33,51 +33,49 @@ function Questions() {
   };
   return (
     <div className="question-section">
-      <div className="content-container">
-        <div className="outer-div">
-          <div className="inner-div">
-            <div className="Question-container">
-              <h3>
-                {`Question: ${ques + 1}/5`} <span>Score:0</span>
-              </h3>
-              <h2>{`Q${ques + 1}: ${quesInCategory[ques].question}`}</h2>
-            </div>
-            <br />
+      <div className="outer-div">
+        <div className="inner-div">
+          <div className="Question-container">
+            <h3>
+              {`Question: ${ques + 1}/5`} 
+            </h3>
+            <h2>{`Q${ques + 1}: ${quesInCategory[ques].question}`}</h2>
           </div>
+          <br />
         </div>
-        <div className="options">
-          {quesInCategory[ques].options.map((eachOption) => (
-            <div
-              className={`each_option ${
-                optionToggle === eachOption.value
-                  ? "selectedOption"
-                  : "each_option"
-              }`}
-              key={eachOption.value}
-              onClick={() => optionHandler(eachOption.value, eachOption)}
-            >
-              {eachOption.value}
-            </div>
-          ))}
-          <div>
-            {ques === 4 ? (
-              <Link to="/ResultPage">
-                <button className="viewScorebtn bg-white">
-                  View Result&nbsp;&nbsp;
-                  <i className="angleRight">
-                    <BsArrowRightCircleFill />
-                  </i>
-                </button>
-              </Link>
-            ) : (
-              <button className="btn bg-white" onClick={nextQuesHandler}>
-                Next &nbsp;
+      </div>
+      <div className="options">
+        {quesInCategory[ques].options.map((eachOption) => (
+          <div
+            className={`each_option ${
+              optionToggle === eachOption.value
+                ? "selectedOption"
+                : "each_option"
+            }`}
+            key={eachOption.value}
+            onClick={() => optionHandler(eachOption.value, eachOption)}
+          >
+            {eachOption.value}
+          </div>
+        ))}
+        <div>
+          {ques === 4 ? (
+            <Link to="/ResultPage">
+              <button className="viewScorebtn bg-white">
+                View Result&nbsp;&nbsp;
                 <i className="angleRight">
                   <BsArrowRightCircleFill />
                 </i>
               </button>
-            )}
-          </div>
+            </Link>
+          ) : (
+            <button className="btn bg-white" onClick={nextQuesHandler}>
+              Next &nbsp;
+              <i className="angleRight">
+                <BsArrowRightCircleFill />
+              </i>
+            </button>
+          )}
         </div>
       </div>
     </div>

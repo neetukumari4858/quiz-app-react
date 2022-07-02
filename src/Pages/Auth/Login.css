@@ -1,120 +1,114 @@
-.outer-Login-container{
-    height: 30rem;
-    width:100%;
-    margin: -37 0 12rem;
-    background-color:var(--dark-black-color) ;
-    display: flex;
-    justify-content: center;
+.outer-Login-container {
+  height: 30rem;
+  width: 94rem;
+  margin: -37 0 12rem;
+  background-color: var(--dark-black-color);
+  display: flex;
+  justify-content: center;
 }
 
-.login-outer-container{
-    height: 25rem;
-    width: 23rem;
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 1px 1px 1px 2px var(--dark-gray-color);
-    border: 1px solid gainsboro;
+.login-outer-container {
+  height: 28rem;
+  width: 23rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 2px var(--dark-gray-color);
+  border: 1px solid gainsboro;
 }
-.login-content-container{
-    height: 23rem;
-    width: 21rem;
-    color:var(--white-color); 
-    margin-top: -0.5rem;
+.login-content-container {
+  height: 23rem;
+  width: 21rem;
+  color: var(--white-color);
+  margin-top: -1rem;
 }
-.user-input{
-    height: 2rem;
-    width: 20rem;
-    margin-left: 0.3rem;
-    border: 1px solid var(--gray-color);
-    color: var(--black-color);
+.user-input {
+  height: 2rem;
+  width: 20rem;
+  margin-left: 0.3rem;
+  border: 1px solid var(--gray-color);
+  color: var(--black-color);
 }
-.create-account{
-    text-align: center;
-    margin-top: 1rem;
-    color:var(--white-color);
+.create-account {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--white-color);
 }
-.Login-heading-two{
-    text-align: center;
-    color:var(--white-color);
-    
+.Login-heading-two {
+  text-align: center;
+  color: var(--white-color);
 }
-.videologin-btn{
-    /* background-color: var(--red-color); */
-    border: transparent;
-    border-radius: 0.2rem;
-    color: var(--white-color);
-    font-weight: 900;
-    
-    cursor: pointer;
+.videologin-btn {
+  /* background-color: var(--red-color); */
+  border: transparent;
+  border-radius: 0.2rem;
+  color: var(--white-color);
+  font-weight: 900;
+  margin-top: 0.5rem;
+
+  cursor: pointer;
 }
-.bg-red{
-    background-color: var(--red-color);
+.bg-red {
+  background-color: var(--red-color);
 }
-.bg-red:hover{
-    background-color: var(--light-red-color)
+.bg-red:hover {
+  background-color: var(--light-red-color);
 }
-.bg-white{
-    background-color: var(--white-color);
-    color: var(--black-color);
+.bg-white {
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
-.bg-white:hover{
-    background-color: var(--light-white-color);
+.bg-white:hover {
+  background-color: var(--light-white-color);
 }
-.forgotPasswodText{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    height: 2rem;
+.forgotPasswodText {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  height: 2rem;
 }
-.lebel-text{
-    display: flex;
-    justify-content: flex-start;
-    margin: 0.7rem ;
-    font-size: 1.2rem;
+.lebel-text {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.7rem;
+  font-size: 1.2rem;
 }
 
-.remember-me{
-    margin: 2px 0 0 -4rem;
-    font-size: 1.1rem;
-    
+.remember-me {
+  position: relative;
+  left: -13.1rem;
+  font-size: 1.1rem;
 }
-.forgotPassword{
-    color:var(--blue-color);
-    text-decoration: none;
-    font-size: 1.2rem;
-    position: relative;
-    top:-1rem;
-    left: -0.5rem;
-}
-.createAccount{
-    text-decoration: none;
-    font-size: 1rem;
-    position: relative;
-    top:-0.1rem;
-    color:var(--white-color);
+
+.createAccount {
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  top: -0.6rem;
+  color: var(--white-color);
 }
 
 .passwordIcon {
-    color: var(--black-color);
-    position: relative;
-    top: -3.2rem;
-    left: 18.3rem;
+  color: var(--black-color);
+  position: relative;
+  top: -3.2rem;
+  left: 18.3rem;
 }
-.fa-eye-slash{
-    background-color: var(--dark-red);
-    position: relative;
-    top: -3rem;
-    left: 2rem;
+.fa-eye-slash {
+  background-color: var(--dark-red);
+  position: relative;
+  top: -3rem;
+  left: 2rem;
 }
-.footerDiv{
-    position: relative;
-    top: -3rem;
+.footerDiv {
+  position: relative;
+  top: -3rem;
 }
-.login-grid{
-    display: grid;
-    grid-template-columns: 21rem;
-    grid-template-rows: 2rem 2rem;
-    grid-row-gap: 1rem;
+.login-grid {
+  display: grid;
+  grid-template-columns: 20rem;
+  grid-template-rows: 2.5rem 2.5rem;
+  grid-row-gap: 0.7rem;
+  margin-left: 0.5rem;
 }

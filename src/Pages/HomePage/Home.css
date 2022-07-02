@@ -1,24 +1,28 @@
 /* css for home page */
-.outer-container{
-    height: 35.8rem;
-    width: 81rem;
-    overflow-y: scroll;
+.outer-container {
+  height: 35.8rem;
+  width: 94rem;
+  overflow-y: scroll;
 }
-.headings{
-    text-align: center;
-    margin-top: 3rem;
+body {
+  display: flex;
+  justify-content: center;
 }
-.quizHeading-one{
-    color: var(--white-color);
+.headings {
+  text-align: center;
+  margin-top: 3rem;
 }
-.quizHeadingTwo{
-    color: var(--white-color);
+.quizHeading-one {
+  color: var(--white-color);
 }
-.first-section{
-    text-align: center;
-    margin-top: 5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    justify-content: center;
+.quizHeadingTwo {
+  color: var(--white-color);
+}
+.first-section {
+  text-align: center;
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
 }

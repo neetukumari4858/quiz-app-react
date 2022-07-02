@@ -1,9 +1,8 @@
 .result-outer-container {
     height: 37rem;
-    width: 81rem;
+    width: 94rem;
     display: flex;
     justify-content: center;
-    overflow-y: scroll;
 }
 
 .result-content-container {

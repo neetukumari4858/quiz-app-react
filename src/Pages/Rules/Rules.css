@@ -1,9 +1,8 @@
 .rules-outer-container{
     height: 40rem;
-    width: 81rem;
+    width: 94rem;
     display: flex;
     justify-content: center;
-    overflow-y: scroll;
 }
 .rules-conainer{
     height: 26rem;

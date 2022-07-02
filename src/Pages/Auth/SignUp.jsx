@@ -5,6 +5,7 @@ import "./SignUp.css";
 import { auth } from "../../firebase";
 import { useAuth } from "../../Hooks/Context/authContext";
 import { toast } from "react-toastify";
+import {AiFillEye , AiFillEyeInvisible} from "react-icons/ai";
 const SignUp = () => {
   const { setLogedIn, setUserdetail } = useAuth();
   const location = useLocation();
@@ -17,6 +18,7 @@ const SignUp = () => {
     checkPolicy: false,
   });
   const navigate = useNavigate();
+  const [inputType, setinputType] = useState("password");
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setsubmitButtonDisabled] = useState(false);
   const submisionHandler = () => {
@@ -65,7 +67,7 @@ const SignUp = () => {
     <div className="outer-Login-container">
       <div className="signup-container">
         <div className="login-content">
-          <h2 className="signUp-heading">Sign up</h2>
+          <h2 className="signUp-heading">Sign Up</h2>
           <label className="signUp-lebel">First Name</label>
           <input
             type="text"
@@ -100,7 +102,7 @@ const SignUp = () => {
 
           <label className="signUp-lebel">Password</label>
           <input
-            type="text"
+            type={inputType}
             className="sign-input"
             placeholder="..................."
             onChange={(event) =>
@@ -108,6 +110,24 @@ const SignUp = () => {
             }
             required
           />
+           <div
+              className="sign_passwordIcon"
+              onClick={() =>
+                inputType === "text"
+                  ? setinputType("password")
+                  : setinputType("text")
+              }
+            >
+              {inputType === "text" ? (
+                <p>
+                  <AiFillEye />
+                </p>
+              ) : (
+                <p>
+                  <AiFillEyeInvisible />
+                </p>
+              )}
+            </div>
 
           <label className="signUp-lebel">Confirm Password</label>
           <input
