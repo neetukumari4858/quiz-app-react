@@ -1,97 +1,92 @@
-.content-container{
-    height: 40rem;
-    width: 81rem;
-    display: flex;
-    justify-content: center;
-    border: 1px solid var(--black-color);
+.question-section {
+  width: 94rem;
+  display: flex;
+  justify-content: center;
 }
-.outer-div{
-    height: 28rem;
-    width: 35rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    color: var(--white-color);
-    border-radius: 1rem;
-    box-shadow: 1px 1px 4px 3px var(--gainsboro-color);
+
+.outer-div {
+  height: 28rem;
+  width: 35rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  color: var(--white-color);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 4px 3px var(--gainsboro-color);
+
+  margin-left: 23rem;
 }
-.inner-div{
-    height: 30rem;
-    width:30rem ;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
+.inner-div {
+  height: 30rem;
+  width: 30rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
-.options{
-    position: relative;
-    top: 12rem;
-    right: 32.6rem;
-    height: 15rem;
-    width: 30rem;
-    text-align: center; 
-    
+.options {
+  position: relative;
+  top: 12rem;
+  right: 32.6rem;
+  height: 15rem;
+  width: 30rem;
+  text-align: center;
 }
-.Question-container{
-    height: 10rem;
-    width: 50rem;
-    text-align: center;    
+.Question-container {
+  height: 10rem;
+  width: 50rem;
+  text-align: center;
 }
-.btn{
-    padding: 0.8rem 1rem;
-    background-color: var(--white-color);
-    position: relative;
-    top:5rem;
-    left: 14rem;
-    text-align: start;
-    color: var(--black-color);
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 900;
+.btn {
+  padding: 0.8rem 1rem;
+  background-color: var(--white-color);
+  position: relative;
+  top: 5rem;
+  left: 14rem;
+  text-align: start;
+  color: var(--black-color);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 900;
 }
-.viewScorebtn{
-    padding: 0.8rem 1.4rem;
-    background-color: var(--white-color);
-    position: relative;
-    top:5rem;
-    left: 13rem;
-    text-align: start;
-    color: var(--black-color);
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 900;
+.viewScorebtn {
+  padding: 0.8rem 1.4rem;
+  background-color: var(--white-color);
+  position: relative;
+  top: 5rem;
+  left: 13rem;
+  text-align: start;
+  color: var(--black-color);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 900;
 }
-span{
-    margin-left: 25rem;
+span {
+  margin-left: 25rem;
 }
-.angleRight{
-    color:var(--dark-red);
-    position: absolute;
+.angleRight {
+  color: var(--dark-red);
+  position: absolute;
 }
 .selectedOption {
-    background-color: var(--gainsboro-color);
+  background-color: var(--gainsboro-color);
 }
 .each_option:hover {
-    cursor: pointer;
-    transform: scale(1.02);
-    background-color: var(--gainsboro-color);
+  cursor: pointer;
+  transform: scale(1.02);
+  background-color: var(--gainsboro-color);
 }
 .each_option {
-    border-radius: 0.5rem;
-    padding: 0.8rem 2rem;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    font-weight:900;
-    color: var(--dark-red);
-    border:1px solid var(--gainsboro-color);
-}
-.question-section{
-    width: 110rem;
-    display: flex;
-    justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  font-weight: 900;
+  color: var(--dark-red);
+  border: 1px solid var(--gainsboro-color);
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { auth, signOut } from "./../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Hooks/Context/authContext";
+import { toast } from "react-toastify";
 
 import "./Navbar.css";
 const Navbar = () => {
@@ -19,6 +20,7 @@ const Navbar = () => {
     signOut(auth);
     setUserdetail({ token: "", user: {} });
     setLogedIn(false);
+    toast.success("Logout Successfull !");
     navigate("/");
   };
   return (
