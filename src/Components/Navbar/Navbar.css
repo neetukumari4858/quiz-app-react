@@ -1,66 +1,63 @@
-
-.navigation{
-    height: 3.8rem;
-    width: 94rem;
-    border-bottom-left-radius: 1rem;
-    box-shadow: 1px 1px 5px 1px var(--gainsboro-color);
-
+.navigation {
+  height: 3.8rem;
+  width: 100%;
+  border-bottom-left-radius: 1rem;
+  box-shadow: 1px 1px 5px 1px var(--gainsboro-color);
 }
-.outer-container::-webkit-scrollbar{
-    width: 0.5rem;
+.outer-container::-webkit-scrollbar {
+  width: 0.5rem;
 }
-.outer-container::-webkit-scrollbar-thumb{
-    width: 0.2rem;
-    background-color:var(--red-color);
-    border-radius: 0.5rem;
+.outer-container::-webkit-scrollbar-thumb {
+  width: 0.1rem;
+  background-color: var(--red-color);
+  border-radius: 0.5rem;
 }
-.quiz-label{
-    font-size: 2rem;
-    position: relative;
-    top: 0.6rem;
-    left: 6rem;
-    color: var(--white-color);
+.quiz-label {
+  font-size: 2rem;
+  position: relative;
+  top: 0.6rem;
+  left: 1rem;
+  color: var(--white-color);
 }
-.quizNav-ul{
-    display: flex;
-    justify-content:flex-end;
-    margin-top: -0.8rem;
-    gap: 2rem;
-    margin-right: 7rem;
-    font-size:1.5rem;
+.quizNav-ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.8rem;
+  gap: 2rem;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
 }
-.anchor-link{
-    text-decoration: none;
-    color:var(--white-color);
+.anchor-link {
+  text-decoration: none;
+  color: var(--white-color);
 }
-body{
-    overflow-y:scroll; 
-    overflow-x: hidden;
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-.userName{
-    display: flex;
-    gap: 1;
-    color:  var(--text-color);
+.userName {
+  display: flex;
+  gap: 1;
+  color: var(--text-color);
 }
-.navLoginbtn{
-    padding:0.4rem 1rem;
+.navLoginbtn {
+  padding: 0.4rem 1rem;
 }
-.navlink{
-    text-decoration: none;
-    font-weight:900;
-    color:  var(--white-color);
+.navlink {
+  text-decoration: none;
+  font-weight: 900;
+  color: var(--white-color);
 }
-.login-btn{
-    border: none;
-    border-radius: 0.5rem;
-    background-color:var(--red-color);
+.login-btn {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--red-color);
 }
-.logout{
-    border: none;
-    border-radius: 0.4rem;
-    background-color:var(--red-color);
-    color: var(--white-color);
-    font-weight: 900;
-    cursor: pointer;
-
+.logout {
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  font-weight: 900;
+  cursor: pointer;
 }

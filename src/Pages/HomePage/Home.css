@@ -1,13 +1,10 @@
 /* css for home page */
 .outer-container {
   height: 35.8rem;
-  width: 94rem;
+  width: 100%;
   overflow-y: scroll;
 }
-body {
-  display: flex;
-  justify-content: center;
-}
+
 .headings {
   text-align: center;
   margin-top: 3rem;
