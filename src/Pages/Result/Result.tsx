@@ -1,6 +1,6 @@
 import React from "react";
 import "./Result.css";
-import { useQuiz } from "../../Hooks/Context/quizContext";
+import { useQuiz } from "./../../Hooks/Context/quizContext";
 import { quizQuestion } from "../Questions/data";
 
 const Result = () => {

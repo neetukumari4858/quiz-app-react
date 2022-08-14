@@ -1,7 +1,28 @@
+// import { type } from "@testing-library/user-event/dist/type"
+// import { type } from "os"
 import {
     badminton,cricket,football
   } from "./../../Image"
-  export const quizQuestion = [
+
+type options={
+  value:String
+  isRight:boolean
+}
+type questions={
+  question:String
+  points:number
+  options:options[]
+}
+type QuizDatatype={
+  categoryId:String
+  categoryName:String
+  categoryImg:String
+  categoryDescription:String
+  questions:questions[]
+}| { }[]
+
+
+  export const quizQuestion:QuizDatatype = [
     {
       categoryId: '1',
       categoryName: 'cricket',

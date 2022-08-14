@@ -1,5 +1,5 @@
 import React from "react";
-import { auth, signOut } from "./../../firebase";
+import { auth, signOut } from "../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Hooks/Context/authContext";
 import { toast } from "react-toastify";

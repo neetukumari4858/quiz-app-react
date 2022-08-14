@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Home.css"
 import { Footer } from '../../Components/Footer/Footer'
-import {quizQuestion} from "./../Questions/data"
-import {CategoryCard} from "./../../Components/CategoryCard/CategoryCard"
+import {quizQuestion} from "../Questions/data"
+import {CategoryCard} from "../../Components/CategoryCard/CategoryCard"
 const Home = () => {
     return (
         <>

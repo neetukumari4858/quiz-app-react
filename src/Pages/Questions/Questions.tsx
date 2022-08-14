@@ -1,7 +1,7 @@
 import React from "react";
 import "./Questions.css";
 import { useState } from "react";
-import { useQuiz } from "./../../Hooks/Context/quizContext";
+import { useQuiz } from "../../Hooks/Context/quizContext";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { quizQuestion } from "./data";
