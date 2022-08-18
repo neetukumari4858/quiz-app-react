@@ -3,7 +3,6 @@ import { useAuth } from "../Hooks/Context/authContext";
 
 const RequireAuth=({children})=>{
     const {isLogedIn}=useAuth();
-    // <!-- console.log(isLogedIn,'isloged in') -->
     const location =useLocation();
     return isLogedIn ?
         children

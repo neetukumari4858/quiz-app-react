@@ -1,13 +1,14 @@
 import React from "react";
 import "./CategoryCard.css";
+import {QuizDatatype} from "./../../types/data.types";
 import { Link } from "react-router-dom";
-const CategoryCard = ({
+const CategoryCard: React.FC<QuizDatatype> = ({
   categoryId,
   categoryName,
   categoryImg,
   categoryDescription,
 }) => {
-  const categoryCardHandler = (categoryId) => {
+  const categoryCardHandler = (categoryId:string) => {
     sessionStorage.setItem("categoryId", categoryId);
   };
 
