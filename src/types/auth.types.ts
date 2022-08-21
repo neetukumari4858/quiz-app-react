@@ -5,12 +5,10 @@ export type userType = {
   confirmPassword: String;
   firstName: String;
   lastName: String;
-  checkPolicy:boolean
+  checkPolicy: boolean;
 } | null;
 
 export type authContextType = {
-  userDetail: {
-    token: string;
-    user: userType;
-  };
+  user:userType
+  
 };
