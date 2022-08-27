@@ -6,10 +6,12 @@ import { auth } from "../../firebase";
 import { useAuth } from "../../Hooks/Context/authContext";
 import { toast } from "react-toastify";
 import {AiFillEye , AiFillEyeInvisible} from "react-icons/ai";
+import {userType } from "./../../types/auth.types";
+
 const SignUp = () => {
   const { setLogedIn, setUserdetail } = useAuth();
   const location = useLocation();
-  const [newUser, setNewUser] = useState({
+  const [newUser, setNewUser] = useState<userType>({
     email: "",
     password: "",
     confirmPassword: "",
@@ -21,26 +23,27 @@ const SignUp = () => {
   const [inputType, setinputType] = useState("password");
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setsubmitButtonDisabled] = useState(false);
+  const {email,password, confirmPassword,firstName,lastName,checkPolicy}=newUser()
   const submisionHandler = () => {
     if (
-      !newUser.email ||
-      !newUser.password ||
-      !newUser.confirmPassword ||
-      !newUser.firstName ||
-      !newUser.lastName
+      !email ||
+      !password ||
+      !confirmPassword ||
+      !firstName ||
+      !lastName
     ) {
       setErrorMsg("Fill all fields");
       return;
     }
-    if (!newUser.checkPolicy) {
+    if (!checkPolicy) {
       toast.warning("tick the check box and agree to the terms and conditions");
     }
-    if (newUser.confirmPassword !== newUser.password) {
+    if (confirmPassword !== password) {
       toast.error("The passwords entered do not match");
     } else {
       setErrorMsg("");
       setsubmitButtonDisabled(true);
-      createUserWithEmailAndPassword(auth, newUser.email, newUser.password)
+      createUserWithEmailAndPassword(auth, email, password)
         .then((response) => {
           setsubmitButtonDisabled(false);
           localStorage.setItem("user", JSON.stringify(response.user.uid));
@@ -147,9 +150,9 @@ const SignUp = () => {
             <input
               type="checkbox"
               id="termsAndCondition"
-              checked={newUser.checkPolicy}
+              checked={checkPolicy}
               onChange={() =>
-                setNewUser({ ...newUser, checkPolicy: !newUser.checkPolicy })
+                setNewUser({ ...newUser, checkPolicy: !checkPolicy })
               }
             />
             <label htmlFor="termsAndCondition" className="terms-and-condition">
