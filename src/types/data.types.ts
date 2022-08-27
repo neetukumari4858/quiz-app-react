@@ -1,5 +1,4 @@
 
-
 export type options = {
   value: string;
   isRight: boolean;

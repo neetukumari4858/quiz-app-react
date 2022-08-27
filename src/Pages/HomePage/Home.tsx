@@ -1,4 +1,3 @@
-// import React from 'react'
 import "./Home.css"
 import { Footer } from '../../Components/Footer/Footer'
 import {quizQuestion} from "../Questions/data"
