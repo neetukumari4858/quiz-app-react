@@ -21,7 +21,7 @@ const Result = () => {
     }
   };
   return (
-    <div className="result-outer-container">
+    <div className="outer-container question-section">
       <div className="result-content-container">
         <div className="result-Question-container">
           <div className="result-inner-div">

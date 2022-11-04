@@ -1,17 +1,29 @@
+@media screen and (max-width:425px) {
+  .login-btn {
+    border: none;
+    margin-top: -0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--red-color);
+  }
+}
+
 .navigation {
   height: 3.8rem;
   width: 100%;
   border-bottom-left-radius: 1rem;
   box-shadow: 1px 1px 5px 1px var(--gainsboro-color);
 }
+
 .outer-container::-webkit-scrollbar {
   width: 0.5rem;
 }
+
 .outer-container::-webkit-scrollbar-thumb {
   width: 0.1rem;
   background-color: var(--red-color);
   border-radius: 0.5rem;
 }
+
 .quiz-label {
   font-size: 2rem;
   position: relative;
@@ -19,6 +31,7 @@
   left: 1rem;
   color: var(--white-color);
 }
+
 .quizNav-ul {
   display: flex;
   justify-content: flex-end;
@@ -27,32 +40,39 @@
   margin-right: 1.5rem;
   font-size: 1.5rem;
 }
+
 .anchor-link {
   text-decoration: none;
   color: var(--white-color);
 }
+
 body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 .userName {
   display: flex;
   gap: 1;
   color: var(--text-color);
 }
+
 .navLoginbtn {
   padding: 0.4rem 1rem;
 }
+
 .navlink {
   text-decoration: none;
   font-weight: 900;
   color: var(--white-color);
 }
+
 .login-btn {
   border: none;
   border-radius: 0.5rem;
   background-color: var(--red-color);
 }
+
 .logout {
   border: none;
   border-radius: 0.4rem;

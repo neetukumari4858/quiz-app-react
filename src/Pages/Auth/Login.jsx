@@ -52,7 +52,7 @@ const Login = () => {
     }
   };
   return (
-    <div className="outer-Login-container">
+    <div className="outer-container question-section">
       <div className="login-outer-container">
         <form className="login-content-container">
           <div className="login-content-container">

@@ -1,4 +1,3 @@
-
 import "./Footer.css"
 const Footer=()=>{
     return (
@@ -9,7 +8,6 @@ const Footer=()=>{
                     <a target='_blank' rel="noopener noreferrer" href="https://github.com/neetukumari4858"><i className="fa fa-github fa_cushrefm quizGithubIcon"></i></a>
                     <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/neetu-kumari-261244227/"><i className="fa fa-linkedin-square quizIcon"></i></a>
                     <a target='_blank' rel="noopener noreferrer"href="https://twitter.com/NeetuKu27618407"><i className="fa fa-twitter quizIcon"></i></a>
-                
                 </ul>
             </div>
         </footer>

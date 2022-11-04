@@ -3,6 +3,7 @@
   height: 35.8rem;
   width: 100%;
   overflow-y: scroll;
+  /* border: 1px solid blue; */
 }
 
 .headings {
