@@ -1,6 +1,7 @@
 import { badminton, cricket, football } from './../../Image'
+import {QuizQuestion} from "./../../types/data.types"
 
-export const quizQuestion = [
+export const quizQuestion :QuizQuestion[]= [
   {
     categoryId: '1',
     categoryName: 'cricket',
@@ -246,5 +247,7 @@ export const quizQuestion = [
     categoryImg: badminton,
     categoryDescription:
       "You don't Play For the Crowd,you Play For the country!",
+    questions: []
+
   },
 ]
