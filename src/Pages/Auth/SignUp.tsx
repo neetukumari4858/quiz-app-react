@@ -76,8 +76,8 @@ const SignUp = () => {
             type="text"
             className="sign-input"
             placeholder="Enter your Name"
-            onChange={(event) =>
-              setNewUser((prev) => ({ ...prev, firstName: event.target.value }))
+            onChange={(event:React.ChangeEvent<HTMLInputElement>) =>
+              setNewUser((prev:any) => ({ ...prev, firstName: event.target.value }))
             }
           />
 
@@ -87,7 +87,7 @@ const SignUp = () => {
             className="sign-input"
             placeholder="Enter your Last Name"
             onChange={(event) =>
-              setNewUser((prev) => ({ ...prev, lastName: event.target.value }))
+              setNewUser((prev:any) => ({ ...prev, lastName: event.target.value }))
             }
             required
           />
@@ -98,7 +98,7 @@ const SignUp = () => {
             className="sign-input"
             placeholder="annu@neog.com"
             onChange={(event) =>
-              setNewUser((prev) => ({ ...prev, email: event.target.value }))
+              setNewUser((prev:any) => ({ ...prev, email: event.target.value }))
             }
             required
           />
@@ -109,7 +109,7 @@ const SignUp = () => {
             className="sign-input"
             placeholder="..................."
             onChange={(event) =>
-              setNewUser((prev) => ({ ...prev, password: event.target.value }))
+              setNewUser((prev:any) => ({ ...prev, password: event.target.value }))
             }
             required
           />
@@ -138,7 +138,7 @@ const SignUp = () => {
             className="sign-input"
             placeholder="........."
             onChange={(event) =>
-              setNewUser((prev) => ({
+              setNewUser((prev:any) => ({
                 ...prev,
                 confirmPassword: event.target.value,
               }))
@@ -158,7 +158,7 @@ const SignUp = () => {
             <label htmlFor="termsAndCondition" className="terms-and-condition">
               I accept all Terms & Conditions
             </label>
-          </div>
+          </div>names: readonly string[] = ["Dylan"];
           <b className="errorMsg"> {errorMsg}</b>
           <div>
             <button
