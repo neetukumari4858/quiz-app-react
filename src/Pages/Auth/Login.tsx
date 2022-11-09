@@ -33,7 +33,7 @@ const Login = () => {
         loginUserData.email,
         loginUserData.password
       )
-        .then((response:setUserdetailType) => {
+        .then((response) => {
           localStorage.setItem("user", JSON.stringify(response.user.uid));
           const token = response.user.accessToken;
           localStorage.setItem("token", token);
