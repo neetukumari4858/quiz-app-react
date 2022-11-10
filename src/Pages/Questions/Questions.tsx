@@ -5,9 +5,10 @@ import { useQuiz } from "../../Hooks/Context/quizContext";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { quizQuestion } from "./data";
+import {Option} from "./../../types/data.types"
 
 function Questions() {
-  const [ques, setQues] = useState(0);
+  const [ques, setQues] = useState<number>(0);
   const quizId = sessionStorage.getItem("categoryId");
   const [optionToggle, setoptionToggle] = useState("");
   const {
@@ -17,16 +18,16 @@ function Questions() {
   const categoryQues = quizQuestion.find(
     (eachCategory) => eachCategory.categoryId === quizId
   );
-
-  const quesInCategory = categoryQues.questions;
+  
+  const quesInCategory = categoryQues?.questions;
 
   const nextQuesHandler = () => {
     setQues(ques + 1);
   };
-  const optionHandler = (optionValue, eachOption) => {
+  const optionHandler = (optionValue:string, eachOption:Option) => {
     setoptionToggle(optionValue);
-    selectedOptions[ques] = optionValue;
-    quizDispatch({ type: "SELECTED_OPTION", payload: [...selectedOptions] });
+    selectedOptions[ques]  = optionValue;
+    quizDispatch({ type: "SELECTED_OPTION", payload: [...selectedOptions as []] });
     if (eachOption.isRight) {
       quizDispatch({ type: "CURRECT_ANS", payload: eachOption.value });
     }
@@ -45,7 +46,7 @@ function Questions() {
         </div>
       </div>
       <div className="options">
-        {quesInCategory[ques].options.map((eachOption) => (
+        {quesInCategory[ques].options.map((eachOption:any) => (
           <div
             className={`each_option ${
               optionToggle === eachOption.value

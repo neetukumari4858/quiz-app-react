@@ -11,7 +11,7 @@ const Result = () => {
   const {
     quizState: { rightAnsArr, selectedOptions },
   } = useQuiz();
-  const checkAnswer = (optionValue, index) => {
+  const checkAnswer = (optionValue:string, index:number) => {
     if (selectedOptions[index]) {
       if (selectedOptions[index] === optionValue) {
         return true;
@@ -26,7 +26,7 @@ const Result = () => {
         <div className="result-Question-container">
           <div className="result-inner-div">
             <h2> Your Result</h2>
-            <h3>{`Question:${correctOptions.questions.length}/${correctOptions.questions.length}`}</h3>
+            <h3>{`Question:${correctOptions?.questions.length}/${correctOptions?.questions.length}`}</h3>
 
             <h2>
               {`${
@@ -34,24 +34,24 @@ const Result = () => {
                   ? "Congratulation! 🎉 Your final score is :"
                   : "Oops! Better luck next time ☹️ Your final Score is :"
               } ${rightAnsArr.length * 10}/${
-                correctOptions.questions.length * 10
+                correctOptions?.questions.length * 10
               }`}
             </h2>
           </div>
           <div className="quetionAndAnswerDiv">
-            {correctOptions.questions.map((eachQuestion, index) => {
+            {correctOptions?.questions.map((eachQuestion:{ question: React.Key | null | undefined; options: any[]; }, index:number) => {
               return (
                 <div key={eachQuestion.question}>
                   <h2>{`Q.${index + 1}: ${eachQuestion.question}`}</h2>
                   <div className="result-options ">
-                    {eachQuestion.options.map((eachOption) => {
+                    {eachQuestion.options.map((eachOption:any) => {
                       return (
                         <div
                           key={eachOption.value}
                           className={` resultOptions ${
                             eachOption.isRight && "resultOptions correct_option"
                           } ${
-                            checkAnswer(eachOption.value, index, eachOption) &&
+                            checkAnswer(eachOption.value, index) &&
                             !eachOption.isRight
                               ? "resultOptions wrong_option"
                               : ""

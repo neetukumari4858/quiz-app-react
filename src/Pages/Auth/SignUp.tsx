@@ -5,13 +5,13 @@ import "./SignUp.css";
 import { auth } from "../../firebase";
 import { useAuth } from "../../Hooks/Context/authContext";
 import { toast } from "react-toastify";
-import {AiFillEye , AiFillEyeInvisible} from "react-icons/ai";
-import {userType } from "./../../types/auth.types";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { newUserType } from "./../../types/auth.types"
 
 const SignUp = () => {
   const { setLogedIn, setUserdetail } = useAuth();
-  const location = useLocation();
-  const [newUser, setNewUser] = useState<userType>({
+  const location: any = useLocation();
+  const [newUser, setNewUser] = useState<newUserType>({
     email: "",
     password: "",
     confirmPassword: "",
@@ -23,7 +23,7 @@ const SignUp = () => {
   const [inputType, setinputType] = useState("password");
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setsubmitButtonDisabled] = useState(false);
-  const {email,password, confirmPassword,firstName,lastName,checkPolicy}=newUser()
+  const { email, password, confirmPassword, firstName, lastName, checkPolicy } = newUser
   const submisionHandler = () => {
     if (
       !email ||
@@ -44,7 +44,7 @@ const SignUp = () => {
       setErrorMsg("");
       setsubmitButtonDisabled(true);
       createUserWithEmailAndPassword(auth, email, password)
-        .then((response) => {
+        .then((response: any) => {
           setsubmitButtonDisabled(false);
           localStorage.setItem("user", JSON.stringify(response.user.uid));
           const token = response.user.accessToken;
@@ -76,8 +76,8 @@ const SignUp = () => {
             type="text"
             className="sign-input"
             placeholder="Enter your Name"
-            onChange={(event:React.ChangeEvent<HTMLInputElement>) =>
-              setNewUser((prev:any) => ({ ...prev, firstName: event.target.value }))
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+              setNewUser((prev) => ({ ...prev, firstName: event.target.value }))
             }
           />
 
@@ -87,7 +87,7 @@ const SignUp = () => {
             className="sign-input"
             placeholder="Enter your Last Name"
             onChange={(event) =>
-              setNewUser((prev:any) => ({ ...prev, lastName: event.target.value }))
+              setNewUser((prev) => ({ ...prev, lastName: event.target.value }))
             }
             required
           />
@@ -98,7 +98,7 @@ const SignUp = () => {
             className="sign-input"
             placeholder="annu@neog.com"
             onChange={(event) =>
-              setNewUser((prev:any) => ({ ...prev, email: event.target.value }))
+              setNewUser((prev) => ({ ...prev, email: event.target.value }))
             }
             required
           />
@@ -109,28 +109,28 @@ const SignUp = () => {
             className="sign-input"
             placeholder="..................."
             onChange={(event) =>
-              setNewUser((prev:any) => ({ ...prev, password: event.target.value }))
+              setNewUser((prev: any) => ({ ...prev, password: event.target.value }))
             }
             required
           />
-           <div
-              className="sign_passwordIcon"
-              onClick={() =>
-                inputType === "text"
-                  ? setinputType("password")
-                  : setinputType("text")
-              }
-            >
-              {inputType === "text" ? (
-                <p>
-                  <AiFillEye />
-                </p>
-              ) : (
-                <p>
-                  <AiFillEyeInvisible />
-                </p>
-              )}
-            </div>
+          <div
+            className="sign_passwordIcon"
+            onClick={() =>
+              inputType === "text"
+                ? setinputType("password")
+                : setinputType("text")
+            }
+          >
+            {inputType === "text" ? (
+              <p>
+                <AiFillEye />
+              </p>
+            ) : (
+              <p>
+                <AiFillEyeInvisible />
+              </p>
+            )}
+          </div>
 
           <label className="signUp-lebel">Confirm Password</label>
           <input
@@ -138,7 +138,7 @@ const SignUp = () => {
             className="sign-input"
             placeholder="........."
             onChange={(event) =>
-              setNewUser((prev:any) => ({
+              setNewUser((prev: any) => ({
                 ...prev,
                 confirmPassword: event.target.value,
               }))

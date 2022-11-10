@@ -1,24 +1,5 @@
 import { useContext, createContext, useState, useEffect } from "react";
-// import { reactChildren } from "./../../types/common.types"
-// import { loggedInType } from "./../../types/auth.types"
-
-
-export type userDetail = {
-  token: string;
-  user: {};
-};
-
-export type AuthContextType = {
-  isLogedIn: boolean;
-  setLogedIn: React.Dispatch<React.SetStateAction<boolean>>;
-  userDetail: userDetail;
-  setUserdetail: React.Dispatch<
-    React.SetStateAction<{
-      token: string;
-      user: {};
-    }>
-  >;
-};
+import {AuthContextType} from "./../../types/auth.types"
 
 const AuthContext = createContext({
   isLogedIn: false,

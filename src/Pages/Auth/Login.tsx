@@ -15,7 +15,7 @@ const Login = () => {
     checkPolicy: false,
   });
   const { setLogedIn, setUserdetail } = useAuth();
-  const location = useLocation();
+  const location: any = useLocation();
   const navigate = useNavigate();
 
   const [errorMsg, setErrorMsg] = useState("");
@@ -33,7 +33,7 @@ const Login = () => {
         loginUserData.email,
         loginUserData.password
       )
-        .then((response) => {
+        .then((response: any) => {
           localStorage.setItem("user", JSON.stringify(response.user.uid));
           const token = response.user.accessToken;
           localStorage.setItem("token", token);
