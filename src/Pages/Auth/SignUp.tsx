@@ -158,7 +158,7 @@ const SignUp = () => {
             <label htmlFor="termsAndCondition" className="terms-and-condition">
               I accept all Terms & Conditions
             </label>
-          </div>names: readonly string[] = ["Dylan"];
+          </div>
           <b className="errorMsg"> {errorMsg}</b>
           <div>
             <button

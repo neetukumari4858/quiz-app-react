@@ -1,4 +1,3 @@
-import React from "react";
 import "./Questions.css";
 import { useState } from "react";
 import { useQuiz } from "../../Hooks/Context/quizContext";

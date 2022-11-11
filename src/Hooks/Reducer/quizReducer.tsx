@@ -1,4 +1,4 @@
-import {quizStateType,QuizActionType} from "./../../types/data.types"
+import {quizStateType,QuizActionType} from "./../../types/quizContextType"
 
 export const quizReducer = (quizState:quizStateType, quizAction:QuizActionType) => {
     switch (quizAction.type) {
