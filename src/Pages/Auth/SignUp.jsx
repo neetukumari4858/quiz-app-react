@@ -64,7 +64,7 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="outer-Login-container">
+    <div className="outer-container question-section">
       <div className="signup-container">
         <div className="login-content">
           <h2 className="signUp-heading">Sign Up</h2>

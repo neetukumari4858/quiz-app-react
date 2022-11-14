@@ -14,15 +14,13 @@
     margin-left: 0.6rem;
     margin-top: 1rem;
     color: var(--white-color);
+    justify-content: center;
+    align-items: center;
 } 
 .quiz-headind-three{
     color: var(--white-color);
+    margin-left: 3rem;
 }
-/* h4{
-    margin-top: -1rem;
-    margin-left: 1.8rem;
-    color: var(--white-color);
-} */
 .quizIcon{
     color: var(--white-color);
     font-size:1.8rem;
@@ -30,6 +28,4 @@
 .quizGithubIcon{
     color: var(--white-color);
     font-size:1.8rem;
-    margin-left: -4rem;
-    margin-top: 1.5rem;
 }

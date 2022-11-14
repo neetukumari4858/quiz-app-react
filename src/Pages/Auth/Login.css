@@ -40,7 +40,6 @@
   color: var(--white-color);
 }
 .videologin-btn {
-  /* background-color: var(--red-color); */
   border: transparent;
   border-radius: 0.2rem;
   color: var(--white-color);
@@ -92,7 +91,7 @@
 .passwordIcon {
   color: var(--black-color);
   position: relative;
-  top: -3.2rem;
+  top: -2.6rem;
   left: 18.3rem;
 }
 .fa-eye-slash {

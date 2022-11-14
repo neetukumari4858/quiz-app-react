@@ -1,3 +1,4 @@
+
 :root{
   --gainsboro-color:gainsboro;
   --gray-color:gray;
@@ -16,7 +17,7 @@
 }
 body{
   margin: 0;
-  overflow-x: hidden;
+  width: 100%;
   background-color: var(--black-color);
   color: var(--white-color);
 }

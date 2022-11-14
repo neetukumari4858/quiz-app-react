@@ -13,7 +13,6 @@
     margin-top: 1rem;
     box-shadow: 1px 1px 5px 1px var(--gainsboro-color);
     border-radius: 1rem;
-
 }
 
 .result-inner-div {
@@ -67,6 +66,7 @@
     width: 30rem;
     text-align: center;
 }
-.quetionAndAnswerDiv{
+
+.quetionAndAnswerDiv {
     margin-top: 6rem;
 }
