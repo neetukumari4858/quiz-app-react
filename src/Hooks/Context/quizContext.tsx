@@ -3,7 +3,7 @@ import { reactChildren } from "./../../types/common.types";
 import { quizReducer } from "../Reducer/quizReducer"
 import { QuizContextType, quizStateType } from "./../../types/quizContextType"
 
-const quizContext = createContext<QuizContextType>({} as QuizContextType)
+const quizContext = createContext({} as QuizContextType)
 const useQuiz = () => useContext(quizContext)
 
 const QuizProvider = ({ children }: reactChildren) => {

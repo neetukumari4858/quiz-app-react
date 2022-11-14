@@ -6,7 +6,7 @@ export type Option = {
 
 export type quizStateType = {
     rightAnsArr: any[],
-    selectedOptions: object[],
+    selectedOptions: object[] | string[],
 }
 
 export type QuizActionType = {

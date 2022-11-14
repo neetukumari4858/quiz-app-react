@@ -1,11 +1,12 @@
 import { useContext, createContext, useState, useEffect } from "react";
 import {AuthContextType} from "./../../types/auth.types"
+import {reactChildren} from "./../../types/common.types"
 
 const AuthContext = createContext({
   isLogedIn: false,
   userDetail: { token: "", user: {} }
 } as AuthContextType);
-const AuthProvider = ({ children }: any) => {
+const AuthProvider = ({ children }: reactChildren) => {
   const userLoggedIn = localStorage.getItem("user") ? true : false;
   const [isLogedIn, setLogedIn] = useState(userLoggedIn);
   const [userDetail, setUserdetail] = useState({ token: "", user: {} });
